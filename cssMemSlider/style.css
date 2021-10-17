@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #030303;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  /* padding: 0 10px; */
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-template-areas: 
+    "image"
+    "docket" "slider";
+
+}
+
+.image {
+    grid-area: image;
+}
+
+.docket {
+    grid-area: docket;
+}
+
+.slider {
+    grid-area: slider;
+}
