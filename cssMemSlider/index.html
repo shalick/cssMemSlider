@@ -8,12 +8,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="image">
-        <img src="./assets/2.png" alt="first meme" />
+    <main>
+      <div class="container">
+        <input type="radio" name="slider" id="sl1" checked />
+        <input type="radio" name="slider" id="sl2" />
+        <input type="radio" name="slider" id="sl3" />
+        <input type="radio" name="slider" id="sl4" />
+        <input type="radio" name="slider" id="sl5" />
+        <div class="images">
+          <div class="image sl1">
+            <div class="meme meme1"></div>
+          </div>
+          <div class="image">
+            <div class="meme meme2"></div>
+          </div>
+          <div class="image">
+            <div class="meme meme3"></div>
+          </div>
+          <div class="image">
+            <div class="meme meme4"></div>
+          </div>
+          <div class="image">
+            <div class="meme meme5"></div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="text-container">
+            <div class="text-slider">
+              <div class="text">Let's go!</div>
+              <div class="text">Never give up!</div>
+              <div class="text">Fire!</div>
+              <div class="text">Fix!</div>
+              <div class="text">Be brave</div>
+            </div>
+          </div>
+          <div class="bullets">
+            <label for="sl1" class="bullet"></label>
+            <label for="sl2" class="bullet"></label>
+            <label for="sl3" class="bullet"></label>
+            <label for="sl4" class="bullet"></label>
+            <label for="sl5" class="bullet"></label>
+          </div>
+        </div>
       </div>
-      <div class="docket"></div>
-      <div class="slider"></div>
-    </div>
+    </main>
   </body>
 </html>
