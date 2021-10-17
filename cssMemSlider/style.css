@@ -8,31 +8,34 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 1%;
 }
 
 .container {
-  max-width: 50%;
+  max-width: 50em;
+  max-height: 60em;
   margin: 0 auto;
-  /* padding: 0 10px; */
+  padding-top: 1em;
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 5fr 1fr;
-  grid-template-areas: 
-    "image"
-    "docket" "slider";
-
+  row-gap: 2em;
+  grid-template-areas:
+    "img img"
+    "docket slider";
 }
 
 .image {
-    grid-area: image;
+  grid-area: img;
 }
 
 .docket {
-    grid-area: docket;
+  grid-area: docket;
 }
 
 .slider {
-    grid-area: slider;
+  grid-area: slider;
+  justify-self: end;
 }
