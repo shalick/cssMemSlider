@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: Gainsboro;
+  padding-top: 2rem;
+  height: 100vh;
+}
+main {
+  color: white;
+  background: DimGrey;
+  margin: 0 auto;
+  border-radius: 2rem;
+  height: 80vh;
+  max-height: 57.5rem;
+  max-width: 50%;
+  /* max-width: 90rem; */
+  padding: 2% 5%;
+}
+.container {
+  margin: 0 auto;
+  height: 100%;
+  max-height: 60rem;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 80% 1fr;
+  row-gap: 2em;
+  grid-template-areas:
+    "img img"
+    "docket bullets";
+}
+.images {
+  grid-area: img;
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+.image {
+  height: 100%;
+  width: 20%;
+  transition: 0.5s ease;
+}
+
+.meme {
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.meme1 {
+  background-image: url(./assets/img/1.jpg);
+}
+.meme2 {
+  background-image: url(./assets/img/2.png);
+}
+.meme3 {
+  background-image: url(./assets/img/3.png);
+}
+.meme4 {
+  background-image: url(./assets/img/4.png);
+}
+.meme5 {
+  background-image: url(./assets/img/8.png);
+}
+.docket {
+  grid-area: docket;
+  width: 60%;
+  overflow: hidden;
+}
+.text-slider {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+.text {
+  padding-top: 0.625rem;
+  font-size: 2rem;
+  width: 20%;
+  transition: 0.5s ease;
+}
+.bullets {
+  grid-area: bullets;
+  display: flex;
+  justify-content: flex-end;
+}
+.label {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+.bullet {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0.3rem solid silver;
+  background-color: slategray;
+  /* margin: 0.7rem 0 0.7rem 0.7rem; */
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+.bullet:hover {
+  background: AliceBlue;
+}
+.bullet:active {
+  transition: 0.05s;
+  background: #f1faee;
+}
+input {
+  display: none;
+}
+
+#sl1:checked ~ .images .sl1 {
+  margin-left: 0;
+}
+#sl2:checked ~ .images .sl1 {
+  margin-left: -20%;
+}
+#sl3:checked ~ .images .sl1 {
+  margin-left: -40%;
+}
+#sl4:checked ~ .images .sl1 {
+  margin-left: -60%;
+}
+#sl5:checked ~ .images .sl1 {
+  margin-left: -80%;
+}
+
+#sl1:checked ~ .docket .text-slider .text:first-child {
+  margin-left: 0;
+}
+#sl2:checked ~ .docket .text-slider .text:first-child {
+  margin-left: -20%;
+}
+#sl3:checked ~ .docket .text-slider .text:first-child {
+  margin-left: -40%;
+}
+#sl4:checked ~ .docket .text-slider .text:first-child {
+  margin-left: -60%;
+}
+#sl5:checked ~ .docket .text-slider .text:first-child {
+  margin-left: -80%;
+}
+
+#sl1:checked ~ .bullets .label:first-child .bullet {
+  background-color: slateblue;
+}
+
+#sl2:checked ~ .bullets .label:nth-of-type(2) .bullet {
+  background-color: slateblue;
+}
+
+#sl3:checked ~ .bullets .label:nth-of-type(3) .bullet {
+  background-color: slateblue;
+}
+
+#sl4:checked ~ .bullets .label:nth-of-type(4) .bullet {
+  background-color: slateblue;
+}
+
+#sl5:checked ~ .bullets .label:last-child .bullet {
+  background-color: slateblue;
+}
+
+#sl1:checked ~ .bullets .label:first-child:hover .bullet {
+  background-color: darkslateblue;
+}
+
+#sl2:checked ~ .bullets .label:nth-of-type(2):hover .bullet {
+  background-color: darkslateblue;
+}
+
+#sl3:checked ~ .bullets .label:nth-of-type(3):hover .bullet {
+  background-color: darkslateblue;
+}
+
+#sl4:checked ~ .bullets .label:nth-of-type(4):hover .bullet {
+  background-color: darkslateblue;
+}
+
+#sl5:checked ~ .bullets .label:last-child:hover .bullet {
+  background-color: darkslateblue;
+}
+
+@media (max-width: 64rem) {
+  main {
+    max-width: 50%;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 2rem 3rem;
+    grid-template-areas:
+      "img"
+      "docket"
+      "bullets";
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .docket {
+    justify-self: center;
+  }
+  .bullets {
+    justify-self: center;
+  }
+  .bullet {
+    width: 1rem;
+    height: 1rem;
+    border: 0.1rem solid silver;
+  }
+}
